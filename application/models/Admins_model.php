@@ -80,10 +80,11 @@ class Admins_model extends EA_Model {
         }
 
         // Validate required fields integrity.
+        // Removed validation of phone number, as it's not needed
+
         if ( ! isset(
             $admin['last_name'],
-            $admin['email'],
-            $admin['phone_number']
+            $admin['email']
         ))
         {
             throw new Exception('Not all required fields are provided: ' . print_r($admin, TRUE));

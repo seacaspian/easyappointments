@@ -457,6 +457,8 @@
                                 <input id="secretary-email" class="form-control required" maxlength="512">
                             </div>
 
+                            <!-- Removed unnecessary bits from coordinator information form
+
                             <div class="form-group">
                                 <label for="secretary-phone-number">
                                     <?= lang('phone_number') ?>
@@ -502,6 +504,8 @@
                                 </label>
                                 <input id="secretary-zip-code" class="form-control" maxlength="64">
                             </div>
+
+                            -->
 
                             <div class="form-group">
                                 <label for="secretary-notes">
@@ -665,6 +669,8 @@
                                 <input id="admin-email" class="form-control required" maxlength="512">
                             </div>
 
+                            <!-- Removed unnecessary bits from admin info form
+
                             <div class="form-group">
                                 <label for="admin-phone-number">
                                     <?= lang('phone_number') ?>
@@ -710,6 +716,8 @@
                                 </label>
                                 <input id="admin-zip-code" class="form-control" maxlength="64">
                             </div>
+
+                            -->
 
                             <div class="form-group">
                                 <label for="admin-notes">

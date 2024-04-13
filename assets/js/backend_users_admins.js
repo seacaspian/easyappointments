@@ -136,6 +136,9 @@
                 first_name: $('#admin-first-name').val(),
                 last_name: $('#admin-last-name').val(),
                 email: $('#admin-email').val(),
+
+                /** Removed unnecessary information for admin users
+                
                 mobile_number: $('#admin-mobile-number').val(),
                 phone_number: $('#admin-phone-number').val(),
                 address: $('#admin-address').val(),
@@ -143,6 +146,8 @@
                 state: $('#admin-state').val(),
                 zip_code: $('#admin-zip-code').val(),
                 notes: $('#admin-notes').val(),
+
+                */
                 timezone: $('#admin-timezone').val(),
                 settings: {
                     username: $('#admin-username').val(),
@@ -330,12 +335,18 @@
         $('#admin-first-name').val(admin.first_name);
         $('#admin-last-name').val(admin.last_name);
         $('#admin-email').val(admin.email);
+
+        /** Remove unnecessary information
+
         $('#admin-mobile-number').val(admin.mobile_number);
         $('#admin-phone-number').val(admin.phone_number);
         $('#admin-address').val(admin.address);
         $('#admin-city').val(admin.city);
         $('#admin-state').val(admin.state);
         $('#admin-zip-code').val(admin.zip_code);
+
+        */
+
         $('#admin-notes').val(admin.notes);
         $('#admin-timezone').val(admin.timezone);
 
@@ -413,9 +424,11 @@
 
         var info = admin.email;
 
-        info = admin.mobile_number ? info + ', ' + admin.mobile_number : info;
+        //comment out next two lines to remove unnecessary information
 
-        info = admin.phone_number ? info + ', ' + admin.phone_number : info;
+        // info = admin.mobile_number ? info + ', ' + admin.mobile_number : info;
+
+        // info = admin.phone_number ? info + ', ' + admin.phone_number : info;
 
         return $('<div/>', {
             'class': 'admin-row entry',

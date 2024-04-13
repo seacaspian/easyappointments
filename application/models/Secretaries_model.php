@@ -88,10 +88,10 @@ class Secretaries_model extends EA_Model {
         }
 
         // Validate required fields integrity.
+        // deleted validation of phone number as it's not needed
         if ( ! isset(
             $secretary['last_name'],
-            $secretary['email'],
-            $secretary['phone_number']
+            $secretary['email']
         ))
         {
             throw new Exception('Not all required fields are provided: ' . print_r($secretary, TRUE));

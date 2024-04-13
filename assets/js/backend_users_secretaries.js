@@ -344,12 +344,18 @@
         $('#secretary-first-name').val(secretary.first_name);
         $('#secretary-last-name').val(secretary.last_name);
         $('#secretary-email').val(secretary.email);
+
+        /** Removed unnecessary bits of information
+         * 
         $('#secretary-mobile-number').val(secretary.mobile_number);
         $('#secretary-phone-number').val(secretary.phone_number);
         $('#secretary-address').val(secretary.address);
         $('#secretary-city').val(secretary.city);
         $('#secretary-state').val(secretary.state);
         $('#secretary-zip-code').val(secretary.zip_code);
+
+        */
+
         $('#secretary-notes').val(secretary.notes);
         $('#secretary-timezone').val(secretary.timezone);
 
@@ -438,9 +444,11 @@
 
         var info = secretary.email;
 
-        info = secretary.mobile_number ? info + ', ' + secretary.mobile_number : info;
+        // Commented out, as we don't need these pieces of information anymore.
 
-        info = secretary.phone_number ? info + ', ' + secretary.phone_number : info;
+        // info = secretary.mobile_number ? info + ', ' + secretary.mobile_number : info;
+
+        // info = secretary.phone_number ? info + ', ' + secretary.phone_number : info;
 
         return $('<div/>', {
             'class': 'secretary-row entry',
