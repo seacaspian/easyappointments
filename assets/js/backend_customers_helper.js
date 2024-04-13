@@ -122,10 +122,12 @@
                 first_name: $('#first-name').val(),
                 last_name: $('#last-name').val(),
                 email: $('#email').val(),
+            /** Removed unnecessary form data from object
                 phone_number: $('#phone-number').val(),
                 address: $('#address').val(),
                 city: $('#city').val(),
                 zip_code: $('#zip-code').val(),
+            */
                 notes: $('#notes').val(),
                 timezone: $('#timezone').val(),
                 language: $('#language').val() || 'english'
@@ -286,10 +288,12 @@
         $('#first-name').val(customer.first_name);
         $('#last-name').val(customer.last_name);
         $('#email').val(customer.email);
+    /** removed unnecessary data from display    
         $('#phone-number').val(customer.phone_number);
         $('#address').val(customer.address);
         $('#city').val(customer.city);
         $('#zip-code').val(customer.zip_code);
+    */
         $('#notes').val(customer.notes);
         $('#timezone').val(customer.timezone);
         $('#language').val(customer.language || 'english');

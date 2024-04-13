@@ -86,15 +86,12 @@ class Customers_model extends EA_Model {
             }
         }
 
-        $phone_number_required = $this->db->get_where('settings', ['name' => 'require_phone_number'])->row()->value === '1';
-
         // Validate required fields
         if ( ! isset(
                 $customer['first_name'],
                 $customer['last_name'],
                 $customer['email']
-            )
-            || ( ! isset($customer['phone_number']) && $phone_number_required))
+            ))
         {
             throw new Exception('Not all required fields are provided: ' . print_r($customer, TRUE));
         }

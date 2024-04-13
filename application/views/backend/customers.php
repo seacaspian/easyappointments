@@ -121,6 +121,8 @@
                         <input id="email" class="form-control required">
                     </div>
 
+                 <!-- Removed Phone Number and address from form completely completely
+                    
                     <div class="form-group">
                         <label class="control-label" for="phone-number">
                             <?= lang('phone_number') ?>
@@ -128,6 +130,7 @@
                         <input id="phone-number" class="form-control
                             <?= $require_phone_number === '1' ? 'required' : '' ?>">
                     </div>
+                
 
                     <div class="form-group">
                         <label class="control-label" for="address">
@@ -150,6 +153,8 @@
                         </label>
                         <input id="zip-code" class="form-control">
                     </div>
+
+                -->
 
                     <div class="form-group">
                         <label for="language">
