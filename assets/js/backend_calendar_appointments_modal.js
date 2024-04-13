@@ -74,10 +74,11 @@ window.BackendCalendarAppointmentsModal = window.BackendCalendarAppointmentsModa
                 first_name: $dialog.find('#first-name').val(),
                 last_name: $dialog.find('#last-name').val(),
                 email: $dialog.find('#email').val(),
-                phone_number: $dialog.find('#phone-number').val(),
-                address: $dialog.find('#address').val(),
-                city: $dialog.find('#city').val(),
-                zip_code: $dialog.find('#zip-code').val(),
+                // Comment out unnecessary data
+                // phone_number: $dialog.find('#phone-number').val(),
+                // address: $dialog.find('#address').val(),
+                // city: $dialog.find('#city').val(),
+                // zip_code: $dialog.find('#zip-code').val(),
                 notes: $dialog.find('#customer-notes').val()
             };
 
@@ -213,10 +214,11 @@ window.BackendCalendarAppointmentsModal = window.BackendCalendarAppointmentsModa
                 $('#first-name').val(customer.first_name);
                 $('#last-name').val(customer.last_name);
                 $('#email').val(customer.email);
-                $('#phone-number').val(customer.phone_number);
-                $('#address').val(customer.address);
-                $('#city').val(customer.city);
-                $('#zip-code').val(customer.zip_code);
+                // Comment out unnecessary data
+                // $('#phone-number').val(customer.phone_number);
+                // $('#address').val(customer.address);
+                // $('#city').val(customer.city);
+                // $('#zip-code').val(customer.zip_code);
                 $('#customer-notes').val(customer.notes);
             }
 
@@ -278,10 +280,10 @@ window.BackendCalendarAppointmentsModal = window.BackendCalendarAppointmentsModa
                             if (customer.first_name.toLowerCase().indexOf(key) !== -1
                                 || customer.last_name.toLowerCase().indexOf(key) !== -1
                                 || customer.email.toLowerCase().indexOf(key) !== -1
-                                || customer.phone_number.toLowerCase().indexOf(key) !== -1
-                                || customer.address.toLowerCase().indexOf(key) !== -1
-                                || customer.city.toLowerCase().indexOf(key) !== -1
-                                || customer.zip_code.toLowerCase().indexOf(key) !== -1
+                                // || customer.phone_number.toLowerCase().indexOf(key) !== -1
+                                // || customer.address.toLowerCase().indexOf(key) !== -1
+                                // || customer.city.toLowerCase().indexOf(key) !== -1
+                                // || customer.zip_code.toLowerCase().indexOf(key) !== -1
                                 || customer.notes.toLowerCase().indexOf(key) !== -1) {
                                 $('<div/>', {
                                     'data-id': customer.id,
@@ -350,8 +352,10 @@ window.BackendCalendarAppointmentsModal = window.BackendCalendarAppointmentsModa
          * Event: Enter New Customer Button "Click"
          */
         $('#new-customer').on('click', function () {
-            $('#manage-appointment').find('#customer-id, #first-name, #last-name, #email, '
-                + '#phone-number, #address, #city, #zip-code, #customer-notes').val('');
+            /*  Re-wrote this snippet to exclude the unnecessary data
+                $('#manage-appointment').find('#customer-id, #first-name, #last-name, #email, '
+                + '#phone-number, #address, #city, #zip-code, #customer-notes').val(''); */
+                $('#manage-appointment').find('#customer-id, #first-name, #last-name, #email').val('');
         });
     }
 

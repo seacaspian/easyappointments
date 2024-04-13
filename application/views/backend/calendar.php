@@ -319,6 +319,8 @@
                                     <input id="email" class="required form-control">
                                 </div>
 
+                                <!-- Remove unnecessary information from appointment edit form
+
                                 <div class="form-group">
                                     <label for="phone-number" class="control-label">
                                         <?= lang('phone_number') ?>
@@ -329,8 +331,11 @@
                                     <input id="phone-number"
                                            class="form-control <?= $require_phone_number === '1' ? 'required' : '' ?>">
                                 </div>
+
+                                -->
+
                             </div>
-                            <div class="col-12 col-sm-6">
+                            <div class="col-12 col-sm-6"> <!-- Remove unnecessary info from appointment edit form
                                 <div class="form-group">
                                     <label for="address" class="control-label">
                                         <?= lang('address') ?>
@@ -350,7 +355,7 @@
                                         <?= lang('zip_code') ?>
                                     </label>
                                     <input id="zip-code" class="form-control">
-                                </div>
+                                </div> -->
 
                                 <div class="form-group">
                                     <label for="customer-notes" class="control-label">
