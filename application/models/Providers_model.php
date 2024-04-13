@@ -88,7 +88,7 @@ class Providers_model extends EA_Model {
         if ( ! isset(
             $provider['last_name'],
             $provider['email'],
-            $provider['phone_number']
+            // $provider['phone_number'] Removed requirement for phone number
         ))
         {
             throw new Exception('Not all required fields are provided: ' . print_r($provider, TRUE));
