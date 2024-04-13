@@ -560,13 +560,15 @@ window.FrontendBook = window.FrontendBook || {};
             .appendTo('#appointment-details');
 
         // Customer Details
+        // Comment out unnecessary fields
+
         var firstName = GeneralFunctions.escapeHtml($('#first-name').val());
         var lastName = GeneralFunctions.escapeHtml($('#last-name').val());
-        var phoneNumber = GeneralFunctions.escapeHtml($('#phone-number').val());
+        // var phoneNumber = GeneralFunctions.escapeHtml($('#phone-number').val());
         var email = GeneralFunctions.escapeHtml($('#email').val());
-        var address = GeneralFunctions.escapeHtml($('#address').val());
-        var city = GeneralFunctions.escapeHtml($('#city').val());
-        var zipCode = GeneralFunctions.escapeHtml($('#zip-code').val());
+        // var address = GeneralFunctions.escapeHtml($('#address').val());
+        // var city = GeneralFunctions.escapeHtml($('#city').val());
+        // var zipCode = GeneralFunctions.escapeHtml($('#zip-code').val());
 
         $('#customer-details').empty();
 
@@ -588,6 +590,7 @@ window.FrontendBook = window.FrontendBook || {};
                         $('<span/>', {
                             'text': EALang.email + ': ' + email
                         }),
+                        /* Removed unnecessary data from booking form HTML
                         $('<br/>'),
                         $('<span/>', {
                             'text': address ? EALang.address + ': ' + address : ''
@@ -600,6 +603,7 @@ window.FrontendBook = window.FrontendBook || {};
                         $('<span/>', {
                             'text': zipCode ? EALang.zip_code + ': ' + zipCode : ''
                         }),
+                        */
                         $('<br/>'),
                     ]
                 })
@@ -609,16 +613,18 @@ window.FrontendBook = window.FrontendBook || {};
 
 
         // Update appointment form data for submission to server when the user confirms the appointment.
+        // Commented out unnecessary data fields in object
+
         var data = {};
 
         data.customer = {
             last_name: $('#last-name').val(),
             first_name: $('#first-name').val(),
             email: $('#email').val(),
-            phone_number: $('#phone-number').val(),
-            address: $('#address').val(),
-            city: $('#city').val(),
-            zip_code: $('#zip-code').val(),
+            // phone_number: $('#phone-number').val(),
+            // address: $('#address').val(),
+            // city: $('#city').val(),
+            // zip_code: $('#zip-code').val(),
             timezone: $('#select-timezone').val()
         };
 
@@ -693,13 +699,15 @@ window.FrontendBook = window.FrontendBook || {};
             FrontendBookApi.getAvailableHours(moment(appointment.start_datetime).format('YYYY-MM-DD'));
 
             // Apply Customer's Data
+            // Remove unnecessary fields by commenting them out
+
             $('#last-name').val(customer.last_name);
             $('#first-name').val(customer.first_name);
             $('#email').val(customer.email);
-            $('#phone-number').val(customer.phone_number);
-            $('#address').val(customer.address);
-            $('#city').val(customer.city);
-            $('#zip-code').val(customer.zip_code);
+            // $('#phone-number').val(customer.phone_number);
+            // $('#address').val(customer.address);
+            // $('#city').val(customer.city);
+            // $('#zip-code').val(customer.zip_code);
             if (customer.timezone) {
                 $('#select-timezone').val(customer.timezone)
             }

@@ -268,6 +268,8 @@
                                 </label>
                                 <input type="text" id="email" class="required form-control" maxlength="120"/>
                             </div>
+
+                            <!-- Removed phone number logic 
                             <div class="form-group">
                                 <label for="phone-number" class="control-label">
                                     <?= lang('phone_number') ?>
@@ -276,9 +278,15 @@
                                 <input type="text" id="phone-number" maxlength="60"
                                        class="<?= $require_phone_number === '1' ? 'required' : '' ?> form-control"/>
                             </div>
+                            -->
                         </div>
 
+                        
+
                         <div class="col-12 col-md-6">
+
+                            <!-- Removed other unnecessary data
+                            
                             <div class="form-group">
                                 <label for="address" class="control-label">
                                     <?= lang('address') ?>
@@ -297,6 +305,9 @@
                                 </label>
                                 <input type="text" id="zip-code" class="form-control" maxlength="120"/>
                             </div>
+
+                            -->
+
                             <div class="form-group">
                                 <label for="notes" class="control-label">
                                     <?= lang('notes') ?>
