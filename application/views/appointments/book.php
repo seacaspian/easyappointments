@@ -281,8 +281,6 @@
                             -->
                         </div>
 
-                        
-
                         <div class="col-12 col-md-6">
 
                             <!-- Removed other unnecessary data
