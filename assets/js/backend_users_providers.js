@@ -139,6 +139,7 @@
 
         /**
          * Event: Save Provider Button "Click"
+         * Update: changed object to exclude phone number and address
          */
         $('#providers').on('click', '#save-provider', function () {
             var provider = {
@@ -146,11 +147,13 @@
                 last_name: $('#provider-last-name').val(),
                 email: $('#provider-email').val(),
                 mobile_number: $('#provider-mobile-number').val(),
+            /*  
                 phone_number: $('#provider-phone-number').val(),
                 address: $('#provider-address').val(),
                 city: $('#provider-city').val(),
                 state: $('#provider-state').val(),
                 zip_code: $('#provider-zip-code').val(),
+            */
                 notes: $('#provider-notes').val(),
                 timezone: $('#provider-timezone').val(),
                 settings: {
@@ -382,15 +385,17 @@
         $('#provider-first-name').val(provider.first_name);
         $('#provider-last-name').val(provider.last_name);
         $('#provider-email').val(provider.email);
+    /** remove displaying provider (instructor) phone number and address
         $('#provider-mobile-number').val(provider.mobile_number);
         $('#provider-phone-number').val(provider.phone_number);
         $('#provider-address').val(provider.address);
         $('#provider-city').val(provider.city);
         $('#provider-state').val(provider.state);
         $('#provider-zip-code').val(provider.zip_code);
+    */
         $('#provider-notes').val(provider.notes);
         $('#provider-timezone').val(provider.timezone);
-
+    
         $('#provider-username').val(provider.settings.username);
         $('#provider-calendar-view').val(provider.settings.calendar_view);
         $('#provider-notifications').prop('checked', Boolean(Number(provider.settings.notifications)));
@@ -518,9 +523,13 @@
 
         var info = provider.email;
 
+        /* Removed phone number from instructor
+
         info = provider.mobile_number ? info + ', ' + provider.mobile_number : info;
 
         info = provider.phone_number ? info + ', ' + provider.phone_number : info;
+
+        */
 
         return $('<div/>', {
             'class': 'provider-row entry',
