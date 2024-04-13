@@ -587,6 +587,8 @@ window.BackendCalendarDefaultView = window.BackendCalendarDefaultView || {};
                     }),
                     $('<br/>'),
 
+                    /*  Got rid of phone icon in calendar view
+                    
                     $('<strong/>', {
                         'class': 'd-inline-block mr-2',
                         'text': EALang.phone
@@ -596,7 +598,7 @@ window.BackendCalendarDefaultView = window.BackendCalendarDefaultView || {};
                         'class': 'd-inline-block ml-1',
                         'text': event.data.customer.phone_number
                     }),
-                    $('<br/>'),
+                    $('<br/>'),  */
 
                     $('<strong/>', {
                         'text': EALang.notes

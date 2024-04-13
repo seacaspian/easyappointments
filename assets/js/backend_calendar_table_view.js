@@ -1315,6 +1315,7 @@ window.BackendCalendarTableView = window.BackendCalendarTableView || {};
                     }),
                     $('<br/>'),
 
+                    /* Got rid of phone icon in calendar view
                     $('<strong/>', {
                         'text': EALang.phone
                     }),
@@ -1323,6 +1324,7 @@ window.BackendCalendarTableView = window.BackendCalendarTableView || {};
                         'text': event.data.customer.phone_number
                     }),
                     $('<br/>'),
+                    */
 
                     $('<strong/>', {
                         'text': EALang.notes
