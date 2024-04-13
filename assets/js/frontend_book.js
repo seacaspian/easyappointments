@@ -583,9 +583,10 @@ window.FrontendBook = window.FrontendBook || {};
                             'text': EALang.customer + ': ' + firstName + ' ' + lastName
                         }),
                         $('<br/>'),
-                        $('<span/>', {
-                            'text': EALang.phone_number + ': ' + phoneNumber
-                        }),
+                        // Commented out because jQuery complained 
+                        // $('<span/>', {
+                        //     'text': EALang.phone_number + ': ' + phoneNumber
+                        // }),
                         $('<br/>'),
                         $('<span/>', {
                             'text': EALang.email + ': ' + email
