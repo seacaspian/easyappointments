@@ -416,6 +416,8 @@
                             <input id="email" class="form-control required">
                         </div>
 
+                        <!-- Removed unnecessary fields
+
                         <div class="form-group">
                             <label for="phone-number"><?= lang('phone_number') ?> *</label>
                             <input id="phone-number" class="form-control required">
@@ -445,6 +447,8 @@
                             <label for="zip-code"><?= lang('zip_code') ?></label>
                             <input id="zip-code" class="form-control">
                         </div>
+
+                        -->
 
                         <div class="form-group">
                             <label for="notes"><?= lang('notes') ?></label>
