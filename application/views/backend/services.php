@@ -119,6 +119,7 @@
                         <input id="service-duration" class="form-control required" type="number" min="<?= EVENT_MINIMUM_DURATION ?>">
                     </div>
 
+                    <!-- Update to remove price and currency information 
                     <div class="form-group">
                         <label for="service-price">
                             <?= lang('price') ?>
@@ -134,6 +135,8 @@
                         </label>
                         <input id="service-currency" class="form-control" maxlength="32">
                     </div>
+
+                    -->
 
                     <div class="form-group">
                         <label for="service-category">

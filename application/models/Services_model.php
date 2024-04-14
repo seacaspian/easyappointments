@@ -104,6 +104,8 @@ class Services_model extends EA_Model {
             }
         }
 
+        // remove snippet that validates service price
+        /*
         if ($service['price'] !== NULL)
         {
             if ( ! is_numeric($service['price']))
@@ -111,6 +113,7 @@ class Services_model extends EA_Model {
                 throw new Exception('Service price is not numeric.');
             }
         }
+        */
 
         // Availabilities type must have the correct value.
         if ($service['availabilities_type'] !== NULL && $service['availabilities_type'] !== AVAILABILITIES_TYPE_FLEXIBLE
@@ -174,12 +177,14 @@ class Services_model extends EA_Model {
      *
      * @throws Exception If required fields are missing.
      */
-    public function exists($service)
+    
+    // Removed validation for price field
+     public function exists($service)
     {
         if ( ! isset(
             $service['name'],
             $service['duration'],
-            $service['price']
+        //    $service['price']
         ))
         {
             throw new Exception('Not all service fields are provided in order to check whether '
@@ -189,7 +194,7 @@ class Services_model extends EA_Model {
         $num_rows = $this->db->get_where('services', [
             'name' => $service['name'],
             'duration' => $service['duration'],
-            'price' => $service['price']
+        //    'price' => $service['price']
         ])->num_rows();
 
         return $num_rows > 0;
@@ -208,20 +213,22 @@ class Services_model extends EA_Model {
      * @throws Exception If required fields are missing.
      * @throws Exception If requested service was not found.
      */
-    public function find_record_id($service)
+    
+    // Deleted validation of price field in the if-statement
+     public function find_record_id($service)
     {
         if ( ! isset($service['name'])
-            || ! isset($service['duration'])
-            || ! isset($service['price']))
+            || ! isset($service['duration']))
         {
             throw new Exception('Not all required fields where provided in order to find the '
                 . 'service record id.');
         }
 
+        // Deleted addition of price
         $result = $this->db->get_where('services', [
             'name' => $service['name'],
-            'duration' => $service['duration'],
-            'price' => $service['price']
+            'duration' => $service['duration']
+        //    'price' => $service['price']
         ]);
 
         if ($result->num_rows() == 0)

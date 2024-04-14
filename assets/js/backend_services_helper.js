@@ -104,10 +104,11 @@
             $('#filter-services .results').css('color', '#AAA');
 
             // Default values
+            // Removed Price and Currency
             $('#service-name').val('Service');
             $('#service-duration').val('30');
-            $('#service-price').val('0');
-            $('#service-currency').val('');
+            // $('#service-price').val('0');
+            // $('#service-currency').val('');
             $('#service-category').val('null');
             $('#service-availabilities-type').val('flexible');
             $('#service-attendants-number').val('1');
@@ -129,12 +130,13 @@
         /**
          * Event: Save Service Button "Click"
          */
+        // Removed Price and Currency
         $('#services').on('click', '#save-service', function () {
             var service = {
                 name: $('#service-name').val(),
                 duration: $('#service-duration').val(),
-                price: $('#service-price').val(),
-                currency: $('#service-currency').val(),
+                // price: $('#service-price').val(),
+                // currency: $('#service-currency').val(),
                 description: $('#service-description').val(),
                 location: $('#service-location').val(),
                 availabilities_type: $('#service-availabilities-type').val(),
@@ -326,12 +328,14 @@
      *
      * @param {Object} service Contains the service record data.
      */
+
+    // Removed Currency and Price
     ServicesHelper.prototype.display = function (service) {
         $('#service-id').val(service.id);
         $('#service-name').val(service.name);
         $('#service-duration').val(service.duration);
-        $('#service-price').val(service.price);
-        $('#service-currency').val(service.currency);
+        // $('#service-price').val(service.price);
+        // $('#service-currency').val(service.currency);
         $('#service-description').val(service.description);
         $('#service-location').val(service.location);
         $('#service-availabilities-type').val(service.availabilities_type);
@@ -409,8 +413,8 @@
     ServicesHelper.prototype.getFilterHtml = function (service) {
         var name = service.name;
 
-        var info = service.duration + ' min - ' + service.price + ' ' + service.currency;
-
+        // var info = service.duration + ' min - ' + service.price + ' ' + service.currency;
+        var info = service.duration + ' min ';
         return $('<div/>', {
             'class': 'service-row entry',
             'data-id': service.id,
