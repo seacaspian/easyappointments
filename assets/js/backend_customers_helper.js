@@ -432,7 +432,7 @@
 
         var info = customer.email;
 
-        info = customer.phone_number ? info + ', ' + customer.phone_number : info;
+        // info = customer.phone_number ? info + ', ' + customer.phone_number : info;
 
         return $('<div/>', {
             'class': 'customer-row entry',

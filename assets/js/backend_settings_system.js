@@ -92,10 +92,10 @@
             value: $('#require-captcha').prop('checked') ? '1' : '0'
         });
 
-        settings.push({
+        /* settings.push({
             name: 'require_phone_number',
             value: $('#require-phone-number').prop('checked') ? '1' : '0'
-        });
+        }); */ 
 
         settings.push({
             name: 'display_any_provider',

@@ -131,7 +131,7 @@ $(function () {
             first_name: $('#first-name').val(),
             last_name: $('#last-name').val(),
             email: $('#email').val(),
-            phone_number: $('#phone-number').val(),
+            // phone_number: $('#phone-number').val(),
             username: $('#username').val(),
             password: $('#password').val()
         };
