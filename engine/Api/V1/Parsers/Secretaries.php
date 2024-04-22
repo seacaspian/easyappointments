@@ -26,19 +26,21 @@ class Secretaries implements ParsersInterface {
      *
      * @param array &$response The response to be encoded.
      */
-    public function encode(array &$response)
+    
+    // Removed unnecessary data from construct
+     public function encode(array &$response)
     {
         $encoded_response = [
             'id' => array_key_exists('id', $response) ? (int)$response['id'] : NULL,
             'firstName' => $response['first_name'],
             'lastName' => $response['last_name'],
             'email' => $response['email'],
-            'mobile' => $response['mobile_number'],
-            'phone' => $response['phone_number'],
-            'address' => $response['address'],
-            'city' => $response['city'],
-            'state' => $response['state'],
-            'zip' => $response['zip_code'],
+            //'mobile' => $response['mobile_number'],
+            //'phone' => $response['phone_number'],
+            //'address' => $response['address'],
+            //'city' => $response['city'],
+            //'state' => $response['state'],
+            //'zip' => $response['zip_code'],
             'notes' => $response['notes'],
             'providers' => $response['providers'],
             'timezone' => $response['timezone'],
@@ -58,6 +60,7 @@ class Secretaries implements ParsersInterface {
      * @param array &$request The request to be decoded.
      * @param array $base Optional (null), if provided it will be used as a base array.
      */
+    //Removed unnecessary data from function
     public function decode(array &$request, array $base = NULL)
     {
         $decoded_request = $base ?: [];
@@ -81,7 +84,7 @@ class Secretaries implements ParsersInterface {
         {
             $decoded_request['email'] = $request['email'];
         }
-
+        /*
         if (array_key_exists('mobile', $request))
         {
             $decoded_request['mobile_number'] = $request['mobile'];
@@ -111,7 +114,7 @@ class Secretaries implements ParsersInterface {
         {
             $decoded_request['zip_code'] = $request['zip'];
         }
-
+        */
         if (array_key_exists('notes', $request))
         {
             $decoded_request['notes'] = $request['notes'];

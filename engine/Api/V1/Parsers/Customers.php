@@ -26,6 +26,8 @@ class Customers implements ParsersInterface {
      *
      * @param array &$response The response to be encoded.
      */
+    
+    // Removed unnecessary information from customer array
     public function encode(array &$response)
     {
         $encoded_response = [
@@ -33,11 +35,11 @@ class Customers implements ParsersInterface {
             'firstName' => $response['first_name'],
             'lastName' => $response['last_name'],
             'email' => $response['email'],
-            'phone' => $response['phone_number'],
-            'address' => $response['address'],
-            'city' => $response['city'],
-            'zip' => $response['zip_code'],
-            'notes' => $response['notes']
+            // 'phone' => $response['phone_number'],
+            // 'address' => $response['address'],
+            // 'city' => $response['city'],
+            // 'zip' => $response['zip_code'],
+            // 'notes' => $response['notes']
         ];
 
         $response = $encoded_response;
@@ -49,7 +51,8 @@ class Customers implements ParsersInterface {
      * @param array &$request The request to be decoded.
      * @param array $base Optional (null), if provided it will be used as a base array.
      */
-    public function decode(array &$request, array $base = NULL)
+    // Removed unnecessary information from decode function
+     public function decode(array &$request, array $base = NULL)
     {
         $decoded_request = $base ?: [];
 
@@ -73,7 +76,7 @@ class Customers implements ParsersInterface {
             $decoded_request['email'] = $request['email'];
         }
 
-        if ( array_key_exists('phone', $request))
+        /*if ( array_key_exists('phone', $request))
         {
             $decoded_request['phone_number'] = $request['phone'];
         }
@@ -92,7 +95,7 @@ class Customers implements ParsersInterface {
         {
             $decoded_request['zip_code'] = $request['zip'];
         }
-
+        */
         if ( array_key_exists('notes', $request))
         {
             $decoded_request['notes'] = $request['notes'];

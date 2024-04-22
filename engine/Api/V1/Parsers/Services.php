@@ -26,14 +26,16 @@ class Services implements ParsersInterface {
      *
      * @param array &$response The response to be encoded.
      */
-    public function encode(array &$response)
+    
+    // Removed unnecessary data from construct
+     public function encode(array &$response)
     {
         $encoded_response = [
             'id' => array_key_exists('id', $response) ? (int)$response['id'] : NULL,
             'name' => $response['name'],
             'duration' => (int)$response['duration'],
-            'price' => (float)$response['price'],
-            'currency' => $response['currency'],
+            //'price' => (float)$response['price'],
+            //'currency' => $response['currency'],
             'description' => $response['description'],
             'location' => $response['location'],
             'availabilitiesType' => $response['availabilities_type'],
@@ -50,6 +52,7 @@ class Services implements ParsersInterface {
      * @param array &$request The request to be decoded.
      * @param array $base Optional (null), if provided it will be used as a base array.
      */
+    // Removed unnecessary data from function
     public function decode(array &$request, array $base = NULL)
     {
         $decoded_request = $base ?: [];
@@ -68,7 +71,7 @@ class Services implements ParsersInterface {
         {
             $decoded_request['duration'] = $request['duration'];
         }
-
+        /*
         if (array_key_exists('price', $request))
         {
             $decoded_request['price'] = $request['price'];
@@ -78,7 +81,7 @@ class Services implements ParsersInterface {
         {
             $decoded_request['currency'] = $request['currency'];
         }
-
+        */
         if (array_key_exists('description', $request))
         {
             $decoded_request['description'] = $request['description'];
