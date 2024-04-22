@@ -1,0 +1,6 @@
+TO-Do List: 
+    Remove Time-Zones, set Istanbul as the default.
+    Remove unnecessary fields from the install script.
+    Remove all unnecessary fields and tables from the database
+    Remove all unnecessary API structures and DB queries
+    
